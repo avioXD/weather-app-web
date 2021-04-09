@@ -56,7 +56,7 @@ window.onload = getLocation();
 
 /** fetching the weather info */
 getData = () => {
-    let URL = `${bypass}api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${API_KEY}`;
+    let URL = `api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${API_KEY}`;
     fetch(URL).then((response) => response.json())
         .then((result) => {
             console.log(result);
