@@ -25,12 +25,6 @@ app.set("views", viewPath); /** it will set the views folder path 'project_root/
 hbs.registerPartials(partialPath); /** it will register those parcels in 'project_root/templates/parcels' folder */
 
 
-//** Defining PORT */
-
-const PORT = process.env.port || 8000;
-app.listen(PORT);
-console.log(chalk.greenBright.underline.inverse(" Server Running.... "));
-console.log(chalk.blueBright.underline.inverse(PORT));
 
 
 
@@ -49,4 +43,11 @@ app.get('/places', (request, response) => {
 });
 app.get('*', (request, response) => {
     response.render('404error');
-})
+});
+
+//** Defining PORT */
+
+const PORT = process.env.port || 8000;
+app.listen(PORT);
+console.log(chalk.greenBright.underline.inverse(" Server Running.... "));
+console.log(chalk.blueBright.underline.inverse(PORT));
