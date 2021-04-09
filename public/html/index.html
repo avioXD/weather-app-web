@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" integrity="sha512-g06pohSHYbSOHKq8tdDGXckE6C23Yt30xlTFDhrO0OcO/bNO2MWXb63oqU/Y23GDMNOon100eGHxZPBnT4QgMw==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../scss/index_page/index_style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body onresize="onResize()">
+    <div class="page-flex">
+        <!-- Header  -->
+        <div class="header">
+            <nav class="navbar">
+                <!-- left nav -->
+                <div class="left-nav">
+                    <a href="/" class="logo"><img src="../icon/icon-weather.png" alt="">Lets Boot</a>
+                </div>
+                <!-- Side bar -->
+                <div class="sidebar ">
+
+                    <a class="closebtn " id="close-btn">&times;</a>
+
+
+                    <ul class="side-ul ">
+                        <li class="link-items ">
+                            <a href=" / " class=" btn fourth shadow ">Home</a>
+                        </li>
+                        <li class="link-items ">
+                            <a href=" /places" class=" btn fourth shadow ">Places</a>
+                        </li>
+                        <li class="link-items ">
+                            <a href="/about" class=" btn fourth shadow ">About</a>
+                        </li>
+
+                    </ul>
+                </div>
+                <!-- side bar -->
+                <!-- mid nav -->
+                <div class="mid-nav">
+
+                    <ul class="nav-ul">
+                        <li>
+                            <a href="/">Home</a>
+                        </li>
+                        <li>
+                            <a href="/places">Places</a>
+                        </li>
+                        <li>
+                            <a href="/about">Abouts</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- right nav -->
+                <div class="right-nav">
+                    <div id="burger-btn" class="burger"><i class="fa fa-bars"> </i></div>
+                </div>
+
+            </nav>
+        </div>
+        <!-- Header End -->
+        <!-- content -->
+        <div class="content">
+            <div class="row ">
+                <div class="col ">
+                    <div class="weather-img ">
+                        <img src="../icon/rainy.png " alt=" " class="stat-img ">
+                    </div>
+                </div>
+                <div class="col card">
+
+                    <div class=" weather-stat " id="weather-template">
+                        <h1>{{ temparature }} &#8451;</h1>
+                        <h3>{{ day }}|| {{ date }}</h3>
+                        <h3>{{ place }} || {{ country }}</h3>
+                    </div>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="welcome ">
+                    <h1>Welcome <span style="color: rgba(0, 199, 235, 0.897); ">To my chanel</span>
+                    </h1>
+                    <h2>Just Turn on location and get Your location Temparature</h2>
+                    <h2></h2>
+                </div>
+            </div>
+        </div>
+        <!-- content End-->
+        <!-- footer -->
+        <div class="footer ">
+            <div class="social ">
+                <ul class="icon-ul ">
+                    <li class="icon-0 "><i class="fab fa-facebook "></i></li>
+                    <li class="icon-1 "><i class="fab fa-youtube "></i></li>
+                    <li class="icon-2 "><i class="fab fa-whatsapp "></i></li>
+                    <li class="icon-3 "><i class="fab fa-github "></i></li>
+                </ul>
+            </div>
+            <div class="copyright shadow ">Copyright 2020</div>
+        </div <!-- footer end -->
+    </div>
+
+
+    <script src="../scripts/weather.js"></script>
+    <script src="../scripts/responsive.js"></script>
+</body>
+
+</html>

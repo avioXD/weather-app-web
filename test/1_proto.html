@@ -1,0 +1,53 @@
+<html>
+
+<head>
+    <title> Function Helper Demo Handlebars JavaScript </title>
+    <script src="../public/scripts/handlebars-v4.7.7.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+    <script>
+        $(document).ready(function() {
+            // Register helper before compiling the template.    
+            // "result" is name of the helper function.    
+            Handlebars.registerHelper("result", function(marks) {
+                    if (marks >= 50) {
+                        return "<span style='color: green'>passed</span>";
+                    } else {
+                        return "<span style='color: red'>failed</span>";
+                    }
+                })
+                // Retrieve the template data from the HTML (jQuery is used here).    
+            var template = $('#basic-template1').html();
+            // Compile the template data into a function    
+            var templateScript = Handlebars.compile(template);
+            // Define data in JSON format.    
+            var context = {
+                "department": "Computer Science",
+                "course": {
+                    "name": "Web Programming"
+                },
+                "students": [{
+                    "fullname": "Asma Khalid",
+                    "marks": "50"
+                }, {
+                    "fullname": "Muhammad Bilal Amjad",
+                    "marks": "80"
+                }, {
+                    "fullname": "John",
+                    "marks": "30"
+                }]
+            };
+            // Pass Data to template script.    
+            var html = templateScript(context);
+            // Insert the HTML code into the page    
+            $(document.body).append(html);
+        });
+    </script>
+</head>
+
+<body> </body>
+<script id="basic-template1" type="text/x-handlebars-template">
+    <div>
+        <h3>This is {{course.name}} course.</h3> {{#each students}} <span style="color: blue"> <b>{{fullname}}</b></span> has {{{result marks}}} the {{../course.name}} course of {{../department}} department.<br/><br/> {{/each}} </div>
+</script>
+
+</html>

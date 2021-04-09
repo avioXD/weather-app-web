@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css"
+        integrity="sha512-g06pohSHYbSOHKq8tdDGXckE6C23Yt30xlTFDhrO0OcO/bNO2MWXb63oqU/Y23GDMNOon100eGHxZPBnT4QgMw=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="../scss/places_page/places_style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="page-flex">
+        <!-- Header  -->
+        {{>__header}}
+        <!-- Header End -->
+        {{!-- Under construction --}}
+        {{>__under_construction}}
+        <!-- content -->
+        <div class="content">
+            <div class="row ">
+                <div class="search-div ">
+                    <div class="dropdown ">
+                        <input type="text " class="search-field " placeholder="Search Places ">
+                        <div class="dropdown-content ">
+                            asdasdawdawdadasddadad
+                            asdasdawdawdadasddadadads
+                            
+
+                        </div>
+
+                    </div>
+                    <div class="button-div">
+                        <button class="search-btn shadow " onclick="search()">Search</button>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="row ">
+                <div class="col ">
+                    <div class="weather-img ">
+                        <img src="../icon/rainy.png " alt=" " class="stat-img ">
+                    </div>
+                </div>
+                <div class="col card">
+                    <div class=" weather-stat ">
+                        <h5 id="max_min_temp"></h5>
+                        <h1 id="temprature"> </h1>
+                        <p id="details"></p>
+                        <h3 id="date"></h3>
+                        <h3 id="location"></h3>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- content End-->
+        <!-- footer -->
+        {{>__footer}}
+        <!-- footer end -->
+    </div>
+
+
+    <script src="../scripts/responsive.js"></script>
+
+</body>
+
+</html>

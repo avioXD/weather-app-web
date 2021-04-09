@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css"
+        integrity="sha512-g06pohSHYbSOHKq8tdDGXckE6C23Yt30xlTFDhrO0OcO/bNO2MWXb63oqU/Y23GDMNOon100eGHxZPBnT4QgMw=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="../scss/index_page/index_style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="loading"><svg class="spinner" width="65px" height="65px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+        <circle class="path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle>
+    </svg></div>
+    
+    <div class="page-flex">
+        <!-- Header  -->
+        {{>__header}}
+        <!-- Header End -->
+        <!-- content -->
+        <div class="content">
+            <div class="row ">
+                <div class="col ">
+                    <div class="weather-img ">
+
+                    </div>
+                </div>
+                <div class="col card">
+                    <div class=" weather-stat " id="weather-template">
+                        <h5 id="max_min_temp"></h5>
+                        <h1 id="temprature"> </h1>
+                        <p id="details"></p>
+                        <h3 id="date"></h3>
+                        <h3 id="location"></h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="welcome ">
+                    <h1>Welcome <span style="color: rgba(0, 199, 235, 0.897); ">To My Weather App</span>
+                    </h1>
+                    <h2>Just Turn on location and get Your location Temparature</h2>
+                    <h2></h2>
+                </div>
+
+            </div>
+        </div>
+        <!-- content End-->
+        <!-- footer -->
+        {{>__footer}}
+        <!-- footer end -->
+    </div>
+    <script src="../scripts/__fetch/by_location.js"></script>
+    <script src="../scripts/responsive.js"></script>
+
+
+
+
+
+
+</body>
+
+</html>

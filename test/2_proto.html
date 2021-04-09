@@ -1,0 +1,31 @@
+<html>
+
+<head>
+    <title> Basic-1 Demo Handlebars JavaScript </title>
+    <script src="js/handlebars-v4.0.5.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+    <script>
+        $(document).ready(function() {
+            // Retrieve the template data from the HTML (jQuery is used here).    
+            var template = $('#basic-template1').html();
+            // Compile the template data into a function    
+            var templateScript = Handlebars.compile(template);
+            // Define data in JSON format.    
+            var context = {
+                "WelcomMsg": "Hello World!",
+                "name": "Handlebars Template Engine"
+            };
+            // Pass Data to template script.    
+            var html = templateScript(context);
+            // Insert the HTML code into the page    
+            $(document.body).append(html);
+        });
+    </script>
+</head>
+
+<body> </body>
+<script id="basic-template1" type="text/x-handlebars-template">
+    <div> {{WelcomMsg}} I am a {{name}}. </div>
+</script>
+
+</html>
