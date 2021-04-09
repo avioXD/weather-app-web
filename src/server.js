@@ -48,6 +48,12 @@ app.get('*', (request, response) => {
 //** Defining PORT */
 
 const PORT = process.env.port || 8000;
+
 app.listen(PORT);
+
+
+
+
 console.log(chalk.greenBright.underline.inverse(" Server Running.... "));
 console.log(chalk.blueBright.underline.inverse(PORT));
+console.log(chalk.green.underline.inverse(app.settings.env));
